@@ -1,0 +1,17 @@
+@startuml
+
+skinparam shadowing true
+
+[*] --> Create0
+Create0 --> Create1 : LBtnDown
+Create1 --> Create2 : LBtnDown
+Create2 --> Create0 : LBtnDown
+
+Move0 --> Move1 : LBtnDown
+Move1 --> Move0 : LBtnUp
+
+Create0 --> Move0 : Click Move
+Move0 --> Create0 : Click Create
+Move1 --> Move1 : Mouse Move
+
+@enduml
